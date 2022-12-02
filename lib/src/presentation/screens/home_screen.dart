@@ -1,6 +1,6 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
-import 'package:internet_uci/presentation/components/window_buttons.dart';
+import 'package:internet_uci/src/presentation/components/title_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,13 +12,14 @@ class HomeScreen extends StatelessWidget {
         color: Colors.transparent,
         width: 0,
         child: Column(
-          children: [
-            WindowTitleBarBox(
-              child: Row(
-                children: [
-                  Expanded(child: MoveWindow()),
-                  const WindowButtons(),
-                ],
+          children: const [
+            CustomTitleBar(),
+            Expanded(
+              child: Center(
+                child: Icon(
+                  Icons.connect_without_contact_outlined,
+                  size: 90,
+                ),
               ),
             )
           ],
