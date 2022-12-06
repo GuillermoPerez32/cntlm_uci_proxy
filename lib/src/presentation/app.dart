@@ -7,11 +7,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      routerConfig: router,
       title: 'cntlm-uci-proxy',
       debugShowCheckedModeBanner: false,
-      routerConfig: router,
       theme: ThemeData(
         fontFamily: 'Roboto',
+        primarySwatch: Colors.indigo,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          backgroundColor: Colors.indigo,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            size: 30,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

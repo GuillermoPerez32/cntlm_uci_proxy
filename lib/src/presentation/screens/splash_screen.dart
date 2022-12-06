@@ -22,22 +22,10 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              Body(),
             ],
           ),
         ),
       ),
     );
-  }
-}
-
-class Body extends StatelessWidget {
-  const Body({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

@@ -3,30 +3,38 @@ import 'package:flutter/material.dart';
 import 'package:internet_uci/src/presentation/components/window_buttons.dart';
 
 class CustomTitleBar extends StatelessWidget {
+  final List<Widget>? actions;
+
   const CustomTitleBar({
     Key? key,
+    this.actions,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return WindowTitleBarBox(
-      child: Row(
-        children: [
-          Expanded(
-            child: MoveWindow(
-              child: const Center(
-                child: Text(
-                  'UCI proxy',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+    return Column(
+      children: <Widget>[
+        Container(
+          color: Theme.of(context).appBarTheme.backgroundColor,
+          child: WindowTitleBarBox(
+            child: Row(
+              children: [
+                Expanded(
+                  child: MoveWindow(),
                 ),
-              ),
+                const WindowButtons(),
+              ],
             ),
           ),
-          const WindowButtons(),
-        ],
-      ),
+        ),
+        Container(
+          child: AppBar(
+            title: Text("UCI-Proxy"),
+            actions: actions,
+            flexibleSpace: Expanded(child: MoveWindow()),
+          ),
+        ),
+      ],
     );
   }
 }
