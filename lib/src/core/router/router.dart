@@ -5,13 +5,14 @@ import 'package:internet_uci/src/presentation/screens/welcome_screen.dart';
 final router = GoRouter(
   routes: [
     GoRoute(
-        path: '/',
-        builder: (context, state) => const WelcomeScreen(),
-        routes: [
-          GoRoute(
-            path: 'home',
-            builder: (context, state) => const HomeScreen(),
-          )
-        ]),
+      path: '/',
+      builder: (context, state) => const WelcomeScreen(),
+      routes: [
+        GoRoute(
+          path: 'home',
+          builder: (context, state) => const HomeScreen(),
+        )
+      ],
+    ),
   ],
 );
