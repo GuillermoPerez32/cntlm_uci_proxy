@@ -19,11 +19,11 @@ class WelcomeScreen extends StatelessWidget {
                 actions: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.settings),
+                    icon: const Icon(Icons.settings),
                   )
                 ],
               ),
-              Body(),
+              const Body(),
             ],
           ),
         ),
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = TextStyle(
+    const textStyle = TextStyle(
       fontSize: 17,
       color: Colors.black54,
     );
@@ -48,11 +48,11 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.all(60),
         child: Column(
           children: [
-            Icon(
+            const Icon(
               Icons.connect_without_contact_outlined,
               size: 90,
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Text(
               'Bienvenido al\nGUI UCI - Proxy',
               textAlign: TextAlign.center,
@@ -60,25 +60,26 @@ class Body extends StatelessWidget {
                     color: Colors.black,
                   ),
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Gestione sus perfiles de conexión',
               style: textStyle,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 15),
-            Text(
+            const SizedBox(height: 15),
+            const Text(
               'Conecte su equipo a la red de la universidad',
               textAlign: TextAlign.center,
               style: textStyle,
             ),
-            Spacer(),
+            const Spacer(),
             ElevatedButton(
               onPressed: () => context.go('/home'),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 80, vertical: 12),
               ),
-              child: Text(
+              child: const Text(
                 'Comenzar',
                 style: TextStyle(
                   fontSize: 18,

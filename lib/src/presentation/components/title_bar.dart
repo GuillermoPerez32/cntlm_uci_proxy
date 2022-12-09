@@ -27,12 +27,12 @@ class CustomTitleBar extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          child: AppBar(
-            title: Text("UCI-Proxy"),
-            actions: actions,
-            flexibleSpace: Expanded(child: MoveWindow()),
-          ),
+        AppBar(
+          title: const Text("UCI-Proxy"),
+          backgroundColor:
+              Theme.of(context).appBarTheme.backgroundColor!.withOpacity(.9),
+          actions: actions,
+          flexibleSpace: MoveWindow(),
         ),
       ],
     );

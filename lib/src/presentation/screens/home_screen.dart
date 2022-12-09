@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
                 actions: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.settings),
+                    icon: const Icon(Icons.settings),
                   )
                 ],
               ),
-              Body(),
+              const Body(),
             ],
           ),
         ),
